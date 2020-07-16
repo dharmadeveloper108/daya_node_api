@@ -26,15 +26,6 @@ mongoose.connect(dbConfig.url, {
     process.exit();
 })
 
-// define a simple route
-app.get('/', (req, res) => {
-    res.json({
-        "message": "A wholesome message",
-        "nationality": "Cuba",
-        "age": 88
-    })
-});
-
 // listen for requests
 app.listen(3000, () => {
     console.log("Server listening on port 3000");
