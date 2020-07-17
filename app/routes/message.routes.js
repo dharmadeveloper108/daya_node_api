@@ -1,5 +1,5 @@
 module.exports = (app) => {
-    const messages = require('../controller/message.controller.js');
+    const messages = require('../controllers/message.controller.js');
 
     // C
     app.post('/messages', messages.create);
@@ -11,9 +11,9 @@ module.exports = (app) => {
     app.get('/messages/:messageId', messages.findFirst);
 
     // U
-    app.put('/messages/:messageId', message.update);
+    app.put('/messages/:messageId', messages.update);
 
     // D
-    app.delete('/messages/:messageId', message.delete);
+    app.delete('/messages/:messageId', messages.delete);
 
 }
