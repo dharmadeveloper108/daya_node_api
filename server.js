@@ -38,6 +38,6 @@ app.get('/', (req, res) => {
 require('./app/routes/message.routes.js')(app);
 
 // listen for requests
-app.listen(3000, () => {
+app.listen(3000, '0.0.0.0', () => {
     console.log("Server listening on port 3000");
 });
